@@ -1,0 +1,20 @@
+{
+    "PolicyName": "root",
+    "PolicyDocument": {
+        "Version": 2020,
+        "Statement": [
+            {
+                "Sid": "IamListAccess",
+                "Effect": "Allow",
+                "Action": [
+                    "iam:ListRoles",
+                    "iam:ListUsers"
+                ],
+                "Resource": [
+                    "arn:aws:iam::656546573543:group/Operators",
+                    "arn:aws:iam::656546573543:group/Developers"
+                ]
+            }
+        ]
+    }
+}
