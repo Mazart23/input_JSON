@@ -7,16 +7,34 @@ The goal of the program is to validate the format of JSON file. Default format i
 
 [AWS::IAM::Role Policy description and example](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-role-policy.html)
 
+
 You can specify:
 * File to validate
 * JSON Schema as Python dictionary
 * JSON field to check whether its contains forbidden value
 * Value that is forbidden in specified field
 
+
 Establishments:
 * If file has incompatible format with schema, the program display information about handled exception
 * If file has compatible format with schema and specified JSON field contains forbidden value, the program return logical False
 * If file has compatible format with schema and specified JSON field do not contains forbidden value, the program return logical True
+
+
+Project structure description:
+
+
+* error_classes\t-> directory for exception classes
+   * role_policy_error.py -> module containing JSONDecodeIAMRoleError
+* examples -> directory for JSON files
+   * example.json -> directory for example JSON file run (default --filepath in __run__ subparser)
+   * test -> directory for tests to run (default --dirpath in __test__ subparser)
+* defaults.py -> file containing the default values of arguments
+* main.py -> main file, needed to execute by command line
+* parser.py -> file specifing function to initializate subparsers
+* schema.py -> file containing the validation schema in Python dictionary format
+* validation.py -> file containing the validation algorithm
+
 
 ## Getting Started
 
@@ -48,6 +66,7 @@ Then, in case of apperance a list in validating JSON file, every element from a 
 Choice of mode is possible by parsers. Here is explanation how to use parsers for every mode:
 
 
+
 __1. Run__
 
 The base command is:
@@ -70,6 +89,7 @@ For more specific information about usage and arguments, execute in command line
 ```
 python main.py run -h
 ```
+
 
 
 __2. Test__
