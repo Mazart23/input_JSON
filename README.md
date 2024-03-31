@@ -95,4 +95,5 @@ python main.py test -h
 ## Version History
 
 * 0.1
-    * Initial Release, tests based on printing
+    * Initial Release
+    * tests based on printing
