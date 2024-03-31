@@ -44,7 +44,10 @@ Program allows to check multiple field and multiple values that are stored in li
 Then, in case of apperance a list in validating JSON file, every element from a list is checking according to the same root element of list and corresponding root in schema.
 
 Choice of mode is possible by parsers. Here is explanation how to use parsers for every mode:
+
+
 __1. Run__
+
 The base command is:
 ```
 python main.py run
@@ -66,7 +69,9 @@ For more specific information about usage and arguments, execute in command line
 python main.py run -h
 ```
 
+
 __2. Test__
+
 The base command is:
 ```
 python main.py test
