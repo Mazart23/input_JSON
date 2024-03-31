@@ -5,6 +5,8 @@ App verifying the input JSON data.
 
 The goal of the app is to validate the format of JSON file. Default format is AWS::IAM::Role Policy.
 
+[AWS::IAM::Role Policy description and example](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-role-policy.html)
+
 You can specify:
 * File to validate
 * JSON Schema as Python dictionary
